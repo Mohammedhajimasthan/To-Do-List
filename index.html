@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calendar To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📅 Calendar To-Do List</h1>
+    <p class="subtitle">Save tasks locally in browser storage or cookies and filter by date.</p>
+
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Enter your task..." />
+      <input type="date" id="dateInput" />
+      <button type="button" onclick="addTask()">Add</button>
+    </div>
+
+    <div class="toolbar">
+      <div class="task-summary">
+        <span id="taskCount">0 tasks</span>
+        <span id="completedCount">0 completed</span>
+      </div>
+      <button id="clearButton" onclick="clearAllTasks()">Clear All</button>
+    </div>
+
+    <div class="filters">
+      <button onclick="filterTasks('today')">Today</button>
+      <button onclick="filterTasks('tomorrow')">Tomorrow</button>
+      <button onclick="filterTasks('future')">Future</button>
+      <button onclick="filterTasks('past')">Past</button>
+      <button onclick="filterTasks('all')">All</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+      <!-- for clearing task..!!  <center><button onclick="clearAllTasks()">Clear All</button></center> -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
